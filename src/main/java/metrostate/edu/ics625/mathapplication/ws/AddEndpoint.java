@@ -1,4 +1,5 @@
-package metrostate.edu.ics625.mathapplication;
+package metrostate.edu.ics625.mathapplication.ws;
+
 
 import metrostate.edu.ics625.mathapplication.generated.AddRequest;
 import metrostate.edu.ics625.mathapplication.generated.AddResponse;
@@ -11,7 +12,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 @Endpoint
 public class AddEndpoint {
 
-  public static final String NS = "http://metrostate.edu/ics625/mathapplication";
+  public static final String NS = "http://metrostate.edu/ics625";
   
   @Autowired
   private MathService mathService;

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package metrostate.edu.ics625.mathapplication;
+package metrostate.edu.ics625.mathapplication.ws;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -32,15 +32,15 @@ public class WsConfig extends WsConfigurerAdapter {
             s.setApplicationContext(ctx);
             s.setTransformWsdlLocations(true);
             ServletRegistrationBean<MessageDispatcherServlet> sb = 
-                    new ServletRegistrationBean<>(s, "/*");
+                    new ServletRegistrationBean<>(s, "/ws/*");
             return sb;
         }
         
     @Bean(name="math")  //name of the WSDL file, math.wsdl
-    public DefaultWsdl11Definition defaultWsdl11(XsdSchema xsd) {
+    public DefaultWsdl11Definition defaultWsdl11(@Autowired XsdSchema xsd) {
         DefaultWsdl11Definition def = new DefaultWsdl11Definition();
         def.setPortTypeName("AddPort");
-        def.setLocationUri("/");
+        def.setLocationUri("/ws");
         def.setTargetNamespace(AddEndpoint.NS);
         def.setSchema(xsd);
         return def;
