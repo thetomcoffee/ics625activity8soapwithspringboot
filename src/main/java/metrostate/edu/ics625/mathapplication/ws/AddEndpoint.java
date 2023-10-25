@@ -1,8 +1,8 @@
 package metrostate.edu.ics625.mathapplication.ws;
 
 
-import metrostate.edu.ics625.mathapplication.generated.AddRequest;
-import metrostate.edu.ics625.mathapplication.generated.AddResponse;
+import edu.metro.ics625.generated.AddRequest;
+import edu.metro.ics625.generated.AddResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
