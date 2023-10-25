@@ -44,5 +44,37 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this te
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+    
+    <xs:element name="absRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="n1" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="absResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
+    <xs:element name="maxRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="n1" type="xs:int" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="maxResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
 </xs:schema>

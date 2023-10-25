@@ -14,5 +14,5 @@ public class MathApplication {
             for(String n: ctx.getBeanDefinitionNames())
             System.out.println("BEAN=" + n);
 	}
-
+        
 }

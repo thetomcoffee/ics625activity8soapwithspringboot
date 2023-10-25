@@ -8,6 +8,8 @@
 
 package edu.metro.ics625.generated;
 
+import java.util.ArrayList;
+import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -25,8 +27,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="n1" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
- *         &lt;element name="n2" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="n1" type="{http://www.w3.org/2001/XMLSchema}int" maxOccurs="unbounded"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -37,47 +38,41 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "n1",
-    "n2"
+    "n1"
 })
-@XmlRootElement(name = "multiplyRequest", namespace = "http://metrostate.edu/ics625")
-public class MultiplyRequest {
+@XmlRootElement(name = "maxRequest", namespace = "http://metrostate.edu/ics625")
+public class MaxRequest {
 
-    @XmlElement(namespace = "http://metrostate.edu/ics625")
-    protected int n1;
-    @XmlElement(namespace = "http://metrostate.edu/ics625")
-    protected int n2;
+    @XmlElement(namespace = "http://metrostate.edu/ics625", type = Integer.class)
+    protected List<Integer> n1;
 
     /**
      * Gets the value of the n1 property.
      * 
-     */
-    public int getN1() {
-        return n1;
-    }
-
-    /**
-     * Sets the value of the n1 property.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a <CODE>set</CODE> method for the n1 property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getN1().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link Integer }
+     * 
      * 
      */
-    public void setN1(int value) {
-        this.n1 = value;
-    }
-
-    /**
-     * Gets the value of the n2 property.
-     * 
-     */
-    public int getN2() {
-        return n2;
-    }
-
-    /**
-     * Sets the value of the n2 property.
-     * 
-     */
-    public void setN2(int value) {
-        this.n2 = value;
+    public List<Integer> getN1() {
+        if (n1 == null) {
+            n1 = new ArrayList<Integer>();
+        }
+        return this.n1;
     }
 
 }

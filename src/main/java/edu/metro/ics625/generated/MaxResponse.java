@@ -25,7 +25,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="result" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="result" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -38,25 +38,33 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "result"
 })
-@XmlRootElement(name = "addResponse", namespace = "http://metrostate.edu/ics625")
-public class AddResponse {
+@XmlRootElement(name = "maxResponse", namespace = "http://metrostate.edu/ics625")
+public class MaxResponse {
 
-    @XmlElement(namespace = "http://metrostate.edu/ics625")
-    protected int result;
+    @XmlElement(namespace = "http://metrostate.edu/ics625", required = true)
+    protected String result;
 
     /**
      * Gets the value of the result property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getResult() {
+    public String getResult() {
         return result;
     }
 
     /**
      * Sets the value of the result property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setResult(int value) {
+    public void setResult(String value) {
         this.result = value;
     }
 
