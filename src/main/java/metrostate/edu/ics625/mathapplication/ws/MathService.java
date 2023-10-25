@@ -17,5 +17,7 @@ public class MathService {
         return a + b;
     }
     
-    
+    public int multiple(int a, int b) {
+        return a * b;
+    }
 }

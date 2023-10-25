@@ -40,8 +40,8 @@ import jakarta.xml.bind.annotation.XmlType;
     "n1",
     "n2"
 })
-@XmlRootElement(name = "addRequest", namespace = "http://metrostate.edu/ics625")
-public class AddRequest {
+@XmlRootElement(name = "multiplyRequest", namespace = "http://metrostate.edu/ics625")
+public class MultiplyRequest {
 
     @XmlElement(namespace = "http://metrostate.edu/ics625")
     protected int n1;

@@ -25,8 +25,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="n1" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
- *         &lt;element name="n2" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="result" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -37,47 +36,28 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "n1",
-    "n2"
+    "result"
 })
-@XmlRootElement(name = "addRequest", namespace = "http://metrostate.edu/ics625")
-public class AddRequest {
+@XmlRootElement(name = "multiplyResponse", namespace = "http://metrostate.edu/ics625")
+public class MultiplyResponse {
 
     @XmlElement(namespace = "http://metrostate.edu/ics625")
-    protected int n1;
-    @XmlElement(namespace = "http://metrostate.edu/ics625")
-    protected int n2;
+    protected int result;
 
     /**
-     * Gets the value of the n1 property.
+     * Gets the value of the result property.
      * 
      */
-    public int getN1() {
-        return n1;
+    public int getResult() {
+        return result;
     }
 
     /**
-     * Sets the value of the n1 property.
+     * Sets the value of the result property.
      * 
      */
-    public void setN1(int value) {
-        this.n1 = value;
-    }
-
-    /**
-     * Gets the value of the n2 property.
-     * 
-     */
-    public int getN2() {
-        return n2;
-    }
-
-    /**
-     * Sets the value of the n2 property.
-     * 
-     */
-    public void setN2(int value) {
-        this.n2 = value;
+    public void setResult(int value) {
+        this.result = value;
     }
 
 }
